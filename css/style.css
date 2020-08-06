@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+/*Variables Declaration */
+/*Reusable function */
 /*
 Mixin
 */
@@ -31,7 +34,7 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  font-weight: weight(regular); }
+  font-weight: 300; }
 
 img {
   display: block;
@@ -118,18 +121,18 @@ cite {
         overflow: hidden; }
     .testimonial-slide .slide-author, .testimonial-slide .slide-author-job {
       font-size: 1.125rem;
-      font-weight: weight(medium);
+      font-weight: 500;
       font-style: normal; }
       @media (max-width: 900px) {
         .testimonial-slide .slide-author, .testimonial-slide .slide-author-job {
           display: block; } }
     .testimonial-slide .slide-author {
-      color: color(dark-blue); }
+      color: #202046; }
       @media (max-width: 900px) {
         .testimonial-slide .slide-author {
           margin-bottom: 0.3125rem; } }
     .testimonial-slide .slide-author-job {
-      color: color(grayish-blue); }
+      color: #babacf; }
     .testimonial-slide .slide-btns {
       position: relative;
       left: 60%;
