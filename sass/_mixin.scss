@@ -1,0 +1,49 @@
+/*
+Mixin
+*/
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == tab) {
+    @media (max-width: 960px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == lg-phone) {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == md-phone) {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == sm-phone) {
+    @media (max-width: 540px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == slm-phone) {
+    @media (min-width: 375px) and (max-width: 425px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == xs-phone) {
+    @media (max-width: 320px) {
+      @content;
+    }
+  }
+}
+
+@mixin orientation($value) {
+  @if ($value == landscape) {
+    @media (orientation: landscape) {
+      @content;
+    }
+  }
+}

@@ -1,5 +1,3 @@
-/*Variables Declaration */
-/*Reusable function */
 /*
 Mixin
 */
@@ -33,7 +31,7 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  font-weight: 300; }
+  font-weight: weight(regular); }
 
 img {
   display: block;
@@ -77,6 +75,9 @@ cite {
   background-repeat: no-repeat;
   background-position: left 0 bottom 0;
   height: 100vh; }
+  @media (orientation: landscape) {
+    .container {
+      height: 100%; } }
 
 .testimonial-slide {
   position: relative;
@@ -117,18 +118,18 @@ cite {
         overflow: hidden; }
     .testimonial-slide .slide-author, .testimonial-slide .slide-author-job {
       font-size: 1.125rem;
-      font-weight: 500;
+      font-weight: weight(medium);
       font-style: normal; }
       @media (max-width: 900px) {
         .testimonial-slide .slide-author, .testimonial-slide .slide-author-job {
           display: block; } }
     .testimonial-slide .slide-author {
-      color: #202046; }
+      color: color(dark-blue); }
       @media (max-width: 900px) {
         .testimonial-slide .slide-author {
           margin-bottom: 0.3125rem; } }
     .testimonial-slide .slide-author-job {
-      color: #babacf; }
+      color: color(grayish-blue); }
     .testimonial-slide .slide-btns {
       position: relative;
       left: 60%;

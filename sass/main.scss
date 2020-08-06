@@ -1,66 +1,5 @@
-/*Variables Declaration */
-
-$colors: (
-  dark-blue: hsl(240, 38%, 20%),
-  grayish-blue: hsl(240, 18%, 77%),
-);
-
-$fontWeight: (
-  regular: 300,
-  medium: 500,
-  bold: 700,
-);
-
-/*Reusable function */
-@function color($color) {
-  @return map-get($colors, $color);
-}
-
-@function weight($value) {
-  @return map-get($fontWeight, $value);
-}
-
-/*
-Mixin
-*/
-
-@mixin respond($breakpoint) {
-  @if ($breakpoint == tab) {
-    @media (max-width: 960px) {
-      @content;
-    }
-  }
-
-  @if ($breakpoint == lg-phone) {
-    @media (max-width: 900px) {
-      @content;
-    }
-  }
-
-  @if ($breakpoint == md-phone) {
-    @media (max-width: 768px) {
-      @content;
-    }
-  }
-
-  @if ($breakpoint == sm-phone) {
-    @media (max-width: 540px) {
-      @content;
-    }
-  }
-
-  @if ($breakpoint == slm-phone) {
-    @media (min-width: 375px) and (max-width: 425px) {
-      @content;
-    }
-  }
-
-  @if ($breakpoint == xs-phone) {
-    @media (max-width: 320px) {
-      @content;
-    }
-  }
-}
+@import "./variables";
+@import "./mixin";
 
 /*
 Generic Styles
@@ -153,6 +92,10 @@ cite {
   background-repeat: no-repeat;
   background-position: left 0 bottom 0;
   height: 100vh;
+
+  @include orientation(landscape) {
+    height: 100%;
+  }
 }
 
 .testimonial {
